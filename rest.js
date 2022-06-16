@@ -102,7 +102,7 @@ from obj and a new key/value pair */
 
 function addKeyVal(obj, key, val) {
 
-	const newObj = { ...obj, key: val };
+	const newObj = { ...obj, [key]: val };
 	return newObj;
 
 
@@ -120,7 +120,6 @@ function removeKey(obj, key) {
 	  console.log(newObj);
 	console.log(obj);
 	  return newObj.key;
-	const newKeys = Object.keys(obj);
 
 	// const newObj = newKeys.reduce((object, key) => 
 	// {if (!obj[key]){
@@ -146,6 +145,6 @@ function combine(obj1, obj2) {
 /** Return a new object with a modified key and value. */
 
 function update(obj, key, val) {
-	const newObj = { ...obj, key : val };
+	const newObj = { ...obj, [key] : val };
 
 }
