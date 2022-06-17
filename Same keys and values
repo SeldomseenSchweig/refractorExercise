@@ -17,6 +17,7 @@ function createInstructor(firstName, lastName){
     firstName,
     lastName,
 }
+}
 
 
 Computed Property Names
@@ -24,15 +25,12 @@ let favoriteNumber = 42;
 
 let instructor = {
   firstName: "Colt"
-  [43]:"That is my favorite"
+  [favoriteNumber]:"That is my favorite"
 }
 
 instructor[favoriteNumber] = "That is my favorite!"
 
 Computed Property Names ES2015
-
-
-
 
 
 Object Methods
@@ -45,8 +43,9 @@ var instructor = {
     return this.firstName + " says bye!";
   }
 }
-Object Methods ES2015
 
+
+Object Methods ES2015
 
 const instructor = {
   firstName: "Colt",
@@ -82,9 +81,8 @@ function creatAnimal(species, verb, noise){
 
   return {
   species,
-  verb,
-  noise(){
-  conole.log(noise)
+  [verb](){
+  return noise;
   }
 
   }
